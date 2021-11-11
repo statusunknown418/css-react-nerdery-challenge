@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .dropdown-item {
+    @apply flex items-center justify-between cursor-default transition-all duration-150 px-4 py-2 outline-none focus:bg-gray-500 rounded-md focus:font-bold text-[#BEC0C8] text-sm;
+  }
+}
+
+/* * Custom CSS properties for the dropdown menu */
+.arrow {
+  color: white;
+}
+
+.transform-origin {
+  transform-origin: var(--radix-dropdown-menu-content-transform-origin);
+  animation: scaleIn 0.25s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* =================================================== */

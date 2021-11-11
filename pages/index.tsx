@@ -1,8 +1,7 @@
-import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 import type {} from "@radix-ui/react-dropdown-menu";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { InputSearch } from "../components/HomeComponents/InputSearch";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +12,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="text-4xl font-black">CSS Figma challenge 999</h1>
+      <main>
+        <div
+          className={`ml-[22px] md:ml-[calc(clamp(192px,15vw,202px)+22px)] mr-[22px] bg-[#F5F6FC] h-screen`}
+        >
+          <h1 className="font-bold">jasdhkjasdh</h1>
+          <InputSearch />
+        </div>
+      </main>
     </div>
   );
 };
