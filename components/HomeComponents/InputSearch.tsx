@@ -11,7 +11,7 @@ export const InputSearch: NextPage<Props> = () => {
       </span>
       <input
         type="search"
-        className="w-full transition-colors duration-200 py-2 text-sm focus:text-white focus:bg-[#343951] rounded-lg pl-10 focus:outline-none bg-white text-gray-900"
+        className="w-full transition-colors duration-200 py-2 text-xs md:text-sm focus:text-white focus:bg-[#343951] rounded-lg pl-10 focus:outline-none bg-white text-gray-900"
         placeholder="Search..."
       />
     </div>
