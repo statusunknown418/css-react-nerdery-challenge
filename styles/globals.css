@@ -6,6 +6,9 @@
   .dropdown-item {
     @apply flex items-center justify-between cursor-default transition-all duration-150 px-4 py-2 outline-none focus:bg-gray-500 rounded-md focus:font-bold text-[#BEC0C8] text-sm;
   }
+  .main-content-container {
+    @apply px-4 ml-[22px] md:ml-[calc(clamp(192px,15vw,202px)+22px)] mr-[22px] bg-[#F5F6FC] h-screen;
+  }
 }
 
 /* * Custom CSS properties for the dropdown menu */
