@@ -5,8 +5,10 @@ import Image from "next/image";
 interface IProjectCardProps {
   id?: number;
   title: string;
-  createdAt: string;
+  createdAt: string | Date;
   nOfDocs: number;
+  extraClassnames?: string;
+  isPrimary: boolean;
 }
 
 export type TProjectCardArr = IProjectCardProps[];
@@ -25,6 +27,9 @@ export const ProjectCard: NextPage<IProjectCardProps> = ({
   title,
   createdAt,
   nOfDocs,
+  extraClassnames,
+  id,
+  isPrimary,
 }) => {
   // ? Custom Dropdown Menu icons and styling for the tooltip
   const dropdownMenuOverride: IMenuOptProps = {
@@ -36,11 +41,15 @@ export const ProjectCard: NextPage<IProjectCardProps> = ({
 
   return (
     <div
-      className="py-4 px-4 space-y-[20px] min-h-full bg-white rounded-xl flex flex-col shadow-md text-xs md:text-sm"
-      onClick={() => console.log("clicked")}
+      className={`py-4 px-4 ${
+        extraClassnames ? extraClassnames : "min-h-full  space-y-[20px]"
+      } bg-white rounded-xl flex flex-col shadow-md text-xs md:text-sm`}
+      onClick={() => console.log("clicked " + id)}
     >
       <header className="place-self-end">
-        <NoSSRCustomDropdownMenu override={dropdownMenuOverride.override} />
+        {isPrimary && (
+          <NoSSRCustomDropdownMenu override={dropdownMenuOverride.override} />
+        )}
       </header>
 
       <section className="flex items-center gap-4">
