@@ -2,9 +2,7 @@ import { NextPage } from "next";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { FolderAddIcon, PlusIcon, UploadIcon } from "@heroicons/react/outline";
 
-type Props = {};
-
-export const CustomDropdownMenuBtn: NextPage<Props> = () => {
+export const CustomDropdownMenuBtn: NextPage = () => {
   const itemStyle = "";
 
   return (
