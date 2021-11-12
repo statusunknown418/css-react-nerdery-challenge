@@ -4,9 +4,10 @@ import { CustomLink } from "../CustomLink";
 import { PAGE_LINKS } from "../../utils/LINKS";
 
 import dynamic from "next/dynamic";
+import { IMenuOptProps } from "../CustomDropdownMenuBtn/index";
 
 // ? This solves a Radix error
-const DynamicDropdownMenu = dynamic<{}>(
+const DynamicDropdownMenu = dynamic<IMenuOptProps>(
   import("../CustomDropdownMenuBtn/index").then(
     (mod) => mod.CustomDropdownMenuBtn
   ),
