@@ -1,28 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { AsideDetails } from "../components/HomeComponents/AsideDetails";
 import { InputSearch } from "../components/HomeComponents/InputSearch";
 import { ProjectCard } from "../components/HomeComponents/ProjectCard";
-
-const PROJECTS = [
-  {
-    id: 1,
-    title: "app project",
-    createdAt: "2020-01-01",
-    nOfDocs: 2,
-  },
-  {
-    id: 2,
-    title: "project: fitbit",
-    createdAt: "2020-01-02",
-    nOfDocs: 2,
-  },
-  {
-    id: 3,
-    title: "client documents",
-    createdAt: "2020-01-03",
-    nOfDocs: 5,
-  },
-];
+import { RecentFilesSection } from "../components/HomeComponents/RecentFiles";
+import { SharedWithMeSection } from "../components/HomeComponents/SharedWithMe";
+import { PROJECTS } from "../utils/PROJECTS";
 
 const Home: NextPage = () => {
   return (
@@ -34,22 +17,29 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={`flex`}>
-        <div className="main-content-container flex flex-col w-3/5 md:w-4/6">
+        <div className="main-content-container flex flex-col w-full md:w-4/6">
           <InputSearch />
           <h1 className="font-bold text-xl text-left">Recently Used</h1>
-          <div className="flex space-x-4">
+          <div className="mt-4 grid place-items-stretch grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  ">
             {PROJECTS.map(({ createdAt, id, nOfDocs, title }) => (
-              <ProjectCard
-                key={id}
-                title={title}
-                createdAt={createdAt}
-                nOfDocs={nOfDocs}
-              />
+              <div key={id}>
+                <ProjectCard
+                  title={title}
+                  createdAt={createdAt}
+                  nOfDocs={nOfDocs}
+                  id={id}
+                  isPrimary={true}
+                  extraClassnames="max-w-sm"
+                />
+              </div>
             ))}
           </div>
+
+          <RecentFilesSection />
+          <SharedWithMeSection />
         </div>
-        <aside className="bg-[#F5F6FC] w-2/5 md:w-2/6">
-          <h1 className="font-bold">Sidebar</h1>
+        <aside className="bg-[#F5F6FC] hidden md:block md:w-2/6">
+          <AsideDetails />
         </aside>
       </main>
     </>
