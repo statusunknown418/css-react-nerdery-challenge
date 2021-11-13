@@ -5,7 +5,7 @@ export const PROJECTS: TProjectCardArr = [
     id: 1,
     title: "app project",
     createdAt: "2020-01-01",
-    nOfDocs: 2,
+    nOfDocs: 1,
   },
   {
     id: 2,
