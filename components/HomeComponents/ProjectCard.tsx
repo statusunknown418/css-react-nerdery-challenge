@@ -8,7 +8,7 @@ interface IProjectCardProps {
   createdAt: string | Date;
   nOfDocs: number;
   extraClassnames?: string;
-  isPrimary: boolean;
+  isPrimary?: boolean;
 }
 
 export type TProjectCardArr = IProjectCardProps[];
