@@ -16,7 +16,9 @@ export interface IMenuOptProps {
 export const CustomDropdownMenuBtn: NextPage<IMenuOptProps> = ({
   override,
 }) => {
-  const itemStyle = "dropdown-item transform-origin";
+  const itemStyle = override?.setNewItemClassnames
+    ? `${override.setNewItemClassnames} transform-origin`
+    : "dropdown-item transform-origin";
 
   return (
     <DropdownMenu.Root>
@@ -25,7 +27,7 @@ export const CustomDropdownMenuBtn: NextPage<IMenuOptProps> = ({
         className={`${
           override
             ? override.setNewTriggerClassnames
-            : "group bg-yellow-500 text-white px-4 py-2 rounded-lg"
+            : "group bg-yellow-500 text-white px-4 py-2 rounded-lg cursor-pointer"
         }`}
       >
         {override ? (
@@ -47,7 +49,7 @@ export const CustomDropdownMenuBtn: NextPage<IMenuOptProps> = ({
         sideOffset={10}
         className={`${
           override?.setNewItemClassnames
-            ? override.setNewItemClassnames
+            ? "bg-white/50 backdrop-blur-md rounded-lg overflow-hidden  "
             : "bg-[#464C61] cursor-defaults rounded-lg w-40 transform-origin"
         }`}
       >

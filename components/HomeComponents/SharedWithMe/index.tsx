@@ -1,33 +1,8 @@
 import { NextPage } from "next";
+import { SHARED_WITH_ME_PROJECTS } from "../../../utils/SHARED_WITH_ME";
 import { ProjectCard, TProjectCardArr } from "../ProjectCard";
 
-interface Props {}
-
-const SHARED_WITH_ME_PROJECTS: TProjectCardArr = [
-  {
-    id: 1,
-    title: "Landing page",
-    createdAt: "10/05/2021",
-    nOfDocs: 10,
-    isPrimary: true,
-  },
-  {
-    id: 2,
-    title: "Illustration Pack",
-    createdAt: "10/05/2021",
-    nOfDocs: 10,
-    isPrimary: false,
-  },
-  {
-    id: 3,
-    title: "CV Design",
-    createdAt: "10/05/2021",
-    nOfDocs: 10,
-    isPrimary: false,
-  },
-];
-
-export const SharedWithMeSection: NextPage<Props> = () => {
+export const SharedWithMeSection: NextPage = () => {
   return (
     <article>
       <h3 className="text-lg font-bold">Shared with me</h3>
