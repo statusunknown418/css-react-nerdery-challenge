@@ -37,7 +37,7 @@ export const ProjectCard: NextPage<IProjectCardProps> = ({
       setNewIcon: <DotsVerticalIcon className="w-4" />,
       setNewTriggerClassnames: "text-[#c4c4c4]",
       setNewItemClassnames:
-        "bg-white/70 backdrop-blur-md text-gray-500 rounded-md text-sm flex items-center gap-5 focus:outline-none cursor-default focus:bg-yellow-100 p-2",
+        "text-xs bg-white/70 filter backdrop-blur-md text-gray-600 rounded-md flex items-center gap-5 focus:outline-none cursor-default focus:bg-yellow-100 focus:font-bold p-2",
     },
   };
 

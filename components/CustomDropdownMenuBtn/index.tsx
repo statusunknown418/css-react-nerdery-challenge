@@ -49,7 +49,7 @@ export const CustomDropdownMenuBtn: NextPage<IMenuOptProps> = ({
         sideOffset={10}
         className={`${
           override?.setNewItemClassnames
-            ? "bg-white/50 backdrop-blur-md rounded-lg overflow-hidden  "
+            ? `bg-white/50 backdrop-blur-md rounded-lg overflow-hidden `
             : "bg-[#464C61] cursor-defaults rounded-lg w-40 transform-origin"
         }`}
       >
