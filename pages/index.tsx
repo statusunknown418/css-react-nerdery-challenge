@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={`flex`}>
-        <div className="main-content-container flex flex-col w-full md:w-4/6">
+        <div className="main-content-container flex flex-col w-full md:w-4/6 py-5">
           <InputSearch />
           <h1 className="font-bold text-xl text-left">Recently Used</h1>
           <div className="mt-4 grid place-items-stretch grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5  ">
