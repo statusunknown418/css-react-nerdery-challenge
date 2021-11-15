@@ -4,7 +4,7 @@ import React from "react";
 type Props = {};
 
 const TrashPage: NextPage<Props> = () => {
-  return <div>Trash</div>;
+  return <div className="main-content-container">Trash</div>;
 };
 
 export default TrashPage;
