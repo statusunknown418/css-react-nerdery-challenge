@@ -6,6 +6,7 @@ import { ProjectCard } from "../components/HomeComponents/ProjectCard";
 import { RecentFilesSection } from "../components/HomeComponents/RecentFiles";
 import { SharedWithMeSection } from "../components/HomeComponents/SharedWithMe";
 import { PROJECTS } from "../utils/PROJECTS";
+import { SEED_USER } from "../utils/SEED_USER";
 
 const Home: NextPage = () => {
   return (
@@ -39,7 +40,7 @@ const Home: NextPage = () => {
           <SharedWithMeSection />
         </div>
         <aside className="bg-[#F5F6FC] hidden md:block md:w-2/6">
-          <AsideDetails />
+          <AsideDetails user={SEED_USER} />
         </aside>
       </main>
     </>
