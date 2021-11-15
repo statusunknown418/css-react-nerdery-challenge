@@ -5,7 +5,7 @@ type Props = {};
 
 export const InputSearch: NextPage<Props> = () => {
   return (
-    <div className="my-5 relative transition-colors duration-200 focus-within:text-gray-400 text-gray-400">
+    <div className="mb-5 relative transition-colors duration-200 focus-within:text-gray-400 text-gray-400">
       <span className="absolute inset-y-0 left-0 flex items-center pl-2">
         <SearchIcon className="w-4" />
       </span>
