@@ -2,13 +2,16 @@ import { CheckCircleIcon, DotsVerticalIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";
 import { IMenuOptProps } from "../CustomDropdownMenuBtn";
 import Image from "next/image";
-interface IProjectCardProps {
+
+export interface IProjectCardProps {
   id?: number;
   title: string;
   createdAt: string | Date;
   nOfDocs: number;
   extraClassnames?: string;
   isPrimary?: boolean;
+  size?: number;
+  color?: string;
 }
 
 export type TProjectCardArr = IProjectCardProps[];
