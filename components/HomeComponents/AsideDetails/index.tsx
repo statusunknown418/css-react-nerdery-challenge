@@ -18,7 +18,7 @@ export type IAsideDetailsProps = {
 
 export const AsideDetails: NextPage<Props> = ({ user }) => {
   return (
-    <section className="flex flex-col gap-2 pt-5 px-5 fixed top-0 min-h-full">
+    <section className="flex flex-col gap-2 pt-5 pl-5 fixed top-0 min-h-full w-[28%]">
       <header className="flex flex-row-reverse items-center gap-4 ">
         <span className="text-xs"> {user.name} </span>
         <div className="rounded-full overflow-hidden">
@@ -72,7 +72,7 @@ export const AsideDetails: NextPage<Props> = ({ user }) => {
         ))}
       </div>
 
-      <div className=" bg-white gap-2 px-5 py-10 rounded-2xl flex flex-col items-center  my-auto">
+      <div className=" bg-white gap-2 px-16 py-10 rounded-2xl flex flex-col items-center mx-auto my-auto">
         <div className="w-32 h-20 rounded-xl bg-gradient-to-r from-primaryClrOrange via-[#FF6860] to-[#689FF8]" />
         <p className="flex flex-col items-center">
           <p className="text-sm font-bold">Buy more space</p>
