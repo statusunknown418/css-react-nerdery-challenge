@@ -5,10 +5,6 @@ import { AsideProjCard } from "./AsideProjCard";
 
 const SEED_PROJECT_USAGE = 420200;
 
-interface Props {
-  user: IAsideDetailsProps;
-}
-
 export type IAsideDetailsProps = {
   name: string;
   email?: string;
@@ -16,16 +12,20 @@ export type IAsideDetailsProps = {
   tier: "free" | "pro" | "enterprise";
 };
 
-export const AsideDetails: NextPage<Props> = ({ user }) => {
+export const AsideDetails: NextPage<IAsideDetailsProps> = ({
+  name,
+  profilePicUrl,
+  tier,
+}) => {
   return (
     <section className="flex flex-col gap-2 pt-5 pl-5 fixed top-0 min-h-full w-[28%]">
       <header className="flex flex-row-reverse items-center gap-4 ">
-        <span className="text-xs"> {user.name} </span>
+        <span className="text-xs"> {name} </span>
         <div className="rounded-full overflow-hidden">
           <Image
             src={
-              user.profilePicUrl
-                ? user.profilePicUrl
+              profilePicUrl
+                ? profilePicUrl
                 : "https://randomuser.me/api/portraits/thumb/men/75.jpg"
             }
             width={28}
@@ -46,9 +46,9 @@ export const AsideDetails: NextPage<Props> = ({ user }) => {
         <Image alt="" src={"/storageCircles.svg"} width={140} height={140} />
       </div>
       <span className="place-self-center text-xs text-gray-400 mt-2">
-        {user.tier === "pro" ? (
+        {tier === "pro" ? (
           <span>{SEED_PROJECT_USAGE / 1000} GB of 500 GB</span>
-        ) : user.tier === "enterprise" ? (
+        ) : tier === "enterprise" ? (
           <span>{SEED_PROJECT_USAGE / 1000} GB of 1 TB</span>
         ) : (
           <span>{SEED_PROJECT_USAGE / 1000} GB of 1 GB</span>

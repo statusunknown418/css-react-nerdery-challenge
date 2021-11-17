@@ -2,6 +2,7 @@ import { CheckCircleIcon, DotsVerticalIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";
 import { IMenuOptProps } from "../CustomDropdownMenuBtn";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 export interface IProjectCardProps {
   id?: number;
@@ -15,8 +16,6 @@ export interface IProjectCardProps {
 }
 
 export type TProjectCardArr = IProjectCardProps[];
-
-import dynamic from "next/dynamic";
 
 const NoSSRCustomDropdownMenu = dynamic<IMenuOptProps>(
   () =>

@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { FolderAddIcon, PlusIcon, UploadIcon } from "@heroicons/react/outline";
 import { ReactNode } from "react";
-import { CustomDropDownIcon } from "./CustomDropDownIcon";
 
 export interface IMenuOptProps {
   override?: {
