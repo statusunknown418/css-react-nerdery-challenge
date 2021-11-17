@@ -1,4 +1,4 @@
-import { DotsVerticalIcon } from "@heroicons/react/outline";
+import { CheckCircleIcon, DotsVerticalIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";
 import { IMenuOptProps } from "../CustomDropdownMenuBtn";
 import Image from "next/image";
