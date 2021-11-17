@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import { SHARED_WITH_ME_PROJECTS } from "../../../utils/SHARED_WITH_ME";
-import { ProjectCard, TProjectCardArr } from "../ProjectCard";
+import { SHARED_WITH_ME_PROJECTS } from "@utils/SHARED_WITH_ME";
+import { ProjectCard } from "../ProjectCard";
 
 export const SharedWithMeSection: NextPage = () => {
   return (
