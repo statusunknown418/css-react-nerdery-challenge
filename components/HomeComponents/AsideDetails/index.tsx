@@ -1,6 +1,6 @@
-import { PROJECTS } from "@utils/PROJECTS";
 import { NextPage } from "next";
 import Image from "next/image";
+import { PROJECTS } from "../../../utils/PROJECTS";
 import { AsideProjCard } from "./AsideProjCard";
 
 const SEED_PROJECT_USAGE = 420200;

@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-
-import { InputSearch } from "../components/HomeComponents/InputSearch";
 import { AsideDetails } from "../components/HomeComponents/AsideDetails";
-import { SharedWithMeSection } from "@components/HomeComponents/SharedWithMe";
-import { ProjectCard } from "@components/HomeComponents/ProjectCard";
+import { InputSearch } from "../components/HomeComponents/InputSearch";
+import { ProjectCard } from "../components/HomeComponents/ProjectCard";
+import { RecentFilesSection } from "../components/HomeComponents/RecentFiles";
+import { SharedWithMeSection } from "../components/HomeComponents/SharedWithMe";
 import { PROJECTS } from "../utils/PROJECTS";
 import { SEED_USER } from "../utils/SEED_USER";
-import { RecentFilesSection } from "@components/HomeComponents/RecentFiles";
 
 const Home: NextPage = () => {
   return (
