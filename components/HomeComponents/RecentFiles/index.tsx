@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { RECENT_FILES_ITEMS } from "@utils/RECENT_FILES";
+import { RECENT_FILES_ITEMS } from "../../../utils/RECENT_FILES";
 import { RecentFileItem } from "../RecentFileItem";
 
 interface Props {}
